@@ -12,7 +12,7 @@ export class AppService {
   emailOptions: ISendMailOptions;
 
   getHello(): string {
-    return "Hello";
+    return "Hello World";
   }
 
   testSendEmail() {
@@ -20,7 +20,7 @@ export class AppService {
       to: 'charles.malama@hobbiton.co.zm',
       from: 'customercare@hobbiton.co.zm',
       subject: 'Tesing email from Charles',
-      html: '<h2> Hi Boss </h2>'
+      html: '<h2> Hi Malama </h2>'
     })
     .then((res) => {
       console.log(res)

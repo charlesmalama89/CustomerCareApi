@@ -20,10 +20,10 @@ import { HandlebarsAdapter, MailerModule } from '@nest-modules/mailer';
   imports: [
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: '104.248.247.78',
+      host: 'localhost',
       port: 3306,
-      username: 'root',
-      password: '@#1h0bb170n',
+      username: 'newuser',
+      password: '',
       database: 'hobbiton_hob_data',
       entities: [Tickets, Users, Product, Departments],// [Tickets,Product,Departments,  Users],
       synchronize: false,

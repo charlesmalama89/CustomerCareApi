@@ -1,5 +1,5 @@
 import { Injectable, HttpException, HttpStatus, Logger } from '@nestjs/common';
-import { Repository } from 'typeorm';
+import { Repository, UpdateEvent, UpdateResult } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm'
 import { Users } from './user.entity';
 import moment = require('moment');
@@ -58,7 +58,7 @@ export class UserService {
 
 
 
-    async createUser(user: Users): Promise<Users> {
+    async createUser(user: any): Promise<UpdateResult> {
         
         const email = user.email;
         user.password = await bcrypt.hash(user.password, 10);
@@ -66,17 +66,16 @@ export class UserService {
         
         console.log(user.password);
         
-        user.created_at = moment().subtract(4, 'days').format('YYYY-MM-DD HH:MM:SS');
-        user.updated_at = moment().subtract(4, 'days').format('YYYY-MM-DD HH:MM:SS');
+        //user.created_at = moment().format('YYYY-MM-DD HH:MM:SS');
+        user.updated_at = moment().format('YYYY-MM-DD HH:MM:SS');
         console.log(user);
         let userDetails = await this.userRepository.findOne({ where: {email:email} });
             if (userDetails) {
-            throw new HttpException(
-                'User already exists',
-                HttpStatus.BAD_REQUEST,
-            );
+                console.log(userDetails);
+                
+            let result = this.userRepository.update({email: userDetails.email}, user);
+            return result;
             }
-        return await this.userRepository.save(user);
     }
 
 

@@ -1,4 +1,4 @@
-import { Controller, Post, Body, UseGuards } from  '@nestjs/common';
+import { Controller, Post, Body, UseGuards, Patch } from  '@nestjs/common';
 import { AuthService } from  './auth.service';
 import { Users } from  './user.entity';
 import { AuthGuard } from '@nestjs/passport';
@@ -12,7 +12,7 @@ export class AuthController {
       return this.authService.login(user);
     }  
 
-    @Post('register')
+    @Patch('register')
     async register(@Body() user: Users): Promise<any> {
         console.log(user)
 ;      return this.authService.register(user);

@@ -25,9 +25,9 @@ export class Users {
     this.password = await bcrypt.hash(this.password, 10);
   }
 
-  // async comparePassword(attempt: string) {
-  //   return await bcrypt.compare(attempt, this.password);
-  // }
+   async comparePassword(attempt: string) {
+     return await bcrypt.compare(attempt, this.password);
+   }
 
   @Column({default: ''})
   cost_center: string;
