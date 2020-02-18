@@ -30,7 +30,7 @@ export class AuthService {
                     HttpStatus.BAD_REQUEST,
                     );
                 }
-        }else{
+        }else if(!user){
             throw new HttpException(
                 'User Not Found, Check Your Email',
                 HttpStatus.BAD_REQUEST,
