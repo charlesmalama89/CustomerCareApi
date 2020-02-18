@@ -20,15 +20,16 @@ export class AuthService {
         console.log(user.password);
         if(user){
             const result = await this.compareHash(userData.password, user.password);
-       console.log(result);
-        if(result == true){
-            return user;
-        }else{
-            throw new HttpException(
-            'Email or Password was invalid',
-            HttpStatus.BAD_REQUEST,
-            );
-          }
+            console.log('=========*****************************=========');
+            console.log(result);
+                if(result == true){
+                    return user;
+                }else{
+                    throw new HttpException(
+                    'Email or Password was invalid',
+                    HttpStatus.BAD_REQUEST,
+                    );
+                }
         }else{
             throw new HttpException(
                 'User Not Found, Check Your Email',
