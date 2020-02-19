@@ -7,7 +7,7 @@ import { MailerModule, HandlebarsAdapter } from '@nest-modules/mailer';
 
 @Module({
   imports: [TypeOrmModule.forFeature([Tickets]),MailerModule.forRoot({
-    transport: 'smtps://charlesmalama89@gmail.com:hoklcfezzonadrtn@smtp.gmail.com',
+    transport: 'smtps://no-reply@hobbiton.co.zm:rrefwxssvobbklpi@smtp.gmail.com',
     defaults: {
       from:'"nest-modules" <modules@nestjs.com>',
     },
