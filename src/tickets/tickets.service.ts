@@ -51,7 +51,7 @@ export class TicketsService {
         this.mailerService.sendMail({
           to: toEmail,
           from: 'no-reply@hobbiton.co.zm',
-          subject: 'CUSTOMER CARE QUERY',
+          subject: ticket.product+' QUERY',
           html:`<!doctype html>
           <html>
             <head>
