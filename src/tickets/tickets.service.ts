@@ -50,7 +50,7 @@ export class TicketsService {
     SendEmail(toEmail: string, ticket: ticketsDTO) {
         this.mailerService.sendMail({
           to: toEmail,
-          from: 'charles.malama@hobbiton.co.zm',
+          from: 'no-reply@hobbiton.co.zm',
           subject: 'CUSTOMER CARE QUERY',
           //html: '<div><p> Hi Team, </p><br><p> Hi Team, Testing Customer Care System </p></div>'
           html:`<!doctype html>
