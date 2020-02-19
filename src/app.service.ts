@@ -15,18 +15,18 @@ export class AppService {
     return "Hello World";
   }
 
-  testSendEmail() {
-    this.emailService.sendMail({
-      to: 'charles.malama@hobbiton.co.zm',
-      from: 'customercare@hobbiton.co.zm',
-      subject: 'Tesing email from Charles',
-      html: '<h2> Hi Malama </h2>'
-    })
-    .then((res) => {
-      console.log(res)
-    })
-    .catch(err => {
-      console.log(err);
-    })
-  }
+  // testSendEmail() {
+  //   this.emailService.sendMail({
+  //     to: 'charles.malama@hobbiton.co.zm',
+  //     from: 'no-reply@hobbiton.co.zm',
+  //     subject: 'Tesing email from Charles',
+  //     html: '<h2> Hi Malama </h2>'
+  //   })
+  //   .then((res) => {
+  //     console.log(res)
+  //   })
+  //   .catch(err => {
+  //     console.log(err);
+  //   })
+  // }
 }

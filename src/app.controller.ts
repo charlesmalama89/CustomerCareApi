@@ -14,9 +14,9 @@ export class AppController {
     return this.appService.getHello();
   }
 
-  @Post()
-  testSendEmail() {
-    return this.appService.testSendEmail();
-  }
+  // @Post()
+  // testSendEmail() {
+  //   return this.appService.testSendEmail();
+  // }
   
 }

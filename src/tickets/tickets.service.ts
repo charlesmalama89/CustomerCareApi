@@ -52,7 +52,6 @@ export class TicketsService {
           to: toEmail,
           from: 'no-reply@hobbiton.co.zm',
           subject: 'CUSTOMER CARE QUERY',
-          //html: '<div><p> Hi Team, </p><br><p> Hi Team, Testing Customer Care System </p></div>'
           html:`<!doctype html>
           <html>
             <head>
@@ -388,7 +387,7 @@ export class TicketsService {
               </style>
             </head>
             <body class="">
-              <span class="preheader">This is preheader text. Some clients will show this text as a preview.</span>
+              <span class="preheader"></span>
               <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="body">
                 <tr>
                   <td>&nbsp;</td>
@@ -478,14 +477,7 @@ export class TicketsService {
             ticketInDb.closedBy = ticket.closedBy;
 
             return await this.ticketsRepository.save(ticketInDb)
-            
-            // ticketInDb = {
-            //     ...ticket
-            // }
-            // const updatedTicket = await this.ticketsRepository.update()
-            // ticketInDb.status = ''
-           
-
+          
     }
 
 }
