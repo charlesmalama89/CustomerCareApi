@@ -30,7 +30,8 @@ import { HandlebarsAdapter, MailerModule } from '@nest-modules/mailer';
       logging: true,
     }),
     MailerModule.forRoot({
-      transport: 'smtps://charlesmalama89@gmail.com:hoklcfezzonadrtn@smtp.gmail.com',
+     // transport: 'smtps://charlesmalama89@gmail.com:hoklcfezzonadrtn@smtp.gmail.com',
+     transport: 'smtps://no-reply@hobbiton.co.zm:rrefwxssvobbklpi@smtp.gmail.com',
       defaults: {
         from:'"nest-modules" <modules@nestjs.com>',
       },
