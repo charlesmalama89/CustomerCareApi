@@ -7,7 +7,7 @@ import { Tickets } from './tickets/entities/tickets.entities';
 import { ProductsModule } from './products/products.module';
 import { Product } from './products/entities/product.entity';
 import { DepartmentsModule } from './departments/departments.module';
-import { Departments } from './departments/entities/departments.entity';
+import { HrmDepartments } from './departments/entities/departments.entity';
 import { PendingTicketsModule } from './pending-tickets/pending-tickets.module';
 import { ClosedTicketsModule } from './closed-tickets/closed-tickets.module';
 import { OverDueTicketsModule } from './over-due-tickets/over-due-tickets.module';
@@ -25,7 +25,7 @@ import { HandlebarsAdapter, MailerModule } from '@nest-modules/mailer';
       username: 'root',
       password: '@#1h0bb170n',
       database: 'hobbiton_hob_data',
-      entities: [Tickets, Users, Product, Departments],// [Tickets,Product,Departments,  Users],
+      entities: [Tickets, Users, Product, HrmDepartments],// [Tickets,Product,Departments,  Users],
       synchronize: false,
       logging: true,
     }),

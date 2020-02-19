@@ -1,16 +1,17 @@
 import { Injectable } from '@nestjs/common';
 import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Departments } from './entities/departments.entity'
+import { HrmDepartments } from './entities/departments.entity';
+
 
 @Injectable()
 export class DepartmentsService {
     constructor(
-        @InjectRepository(Departments)
-        private readonly departmentsService: Repository<Departments[]>
+        @InjectRepository(HrmDepartments)
+        private readonly DepartmentsService: Repository<HrmDepartments[]>
     ){}
 
     getDepartments(){
-      return  this.departmentsService.find();
+      return  this.DepartmentsService.find();
     }
 }

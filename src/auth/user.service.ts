@@ -27,7 +27,7 @@ export class UserService {
         
         
         
-        const result = await this.userRepository.query("SELECT departments.dept_name from users left JOIN hrm_jobtitle_user on users.id = hrm_jobtitle_user.user_id left join hrm_jobtitles on hrm_jobtitle_user.job_title_id = hrm_jobtitles.id LEFT JOIN departments on hrm_jobtitles.departments_id = departments.id WHERE users.id = '"+id+"';");
+        const result = await this.userRepository.query("SELECT HrmDepartments.dept_name from users left JOIN hrm_jobtitle_user on users.id = hrm_jobtitle_user.user_id left join hrm_jobtitles on hrm_jobtitle_user.job_title_id = hrm_jobtitles.id LEFT JOIN HrmDepartments on hrm_jobtitles.HrmDepartments_id = HrmDepartments.id WHERE users.id = '"+id+"';");
         console.log('===RESULTS===');
         Logger.log(result[0]['dept_name'], 'RESULTSS')
         // console.log(JSON.parse(result));
