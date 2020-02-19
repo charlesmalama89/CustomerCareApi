@@ -32,13 +32,13 @@ export class TicketsService {
         console.log(createTicket);
 
         const department = ticket.department;
-        if(department === 'ICT'){
+        if(department === 'Tech'){
             this.toEmail = 'tech@hobbiton.co.zm';
         }else if(department === 'Human Resources'){
             this.toEmail = 'invest@hobbiton.co.zm';
         }else if(department === 'Finance'){
             this.toEmail = 'finance@hobbiton.co.zm ';
-        }else if(department === 'Sales and Marketing'){
+        }else if(department === 'Sales'){
             this.toEmail = 'invest@hobbiton.co.zm';
         }else{
             this.toEmail = 'invest@hobbiton.co.zm';
