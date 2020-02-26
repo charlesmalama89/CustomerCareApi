@@ -808,7 +808,7 @@ export class TicketsService {
                             <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                               <tr>
                                 <td>
-                                  <p>Dear Team,</p>
+                                  <p>Dear ${ticket.name},</p>
                                   <p>A ticket has been generated to deal with your ${ticket.product} Query. Your ticket number is ${ticket.ticketNum}. 
                                   You will be notified as soon as it resolved.</p>
                                   <!-- <p>Kindly take a look at it as soon as possible.</p> -->
