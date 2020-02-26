@@ -404,7 +404,8 @@ export class TicketsService {
                               <tr>
                                 <td>
                                   <p>Dear Team,</p>
-                                  <p>A ticket of number ${ticket.ticketNum} has been generated. Kindly take a look at it as soon as possible.</p>
+                                  <p>A ticket of number ${ticket.ticketNum} has been generated for the ${ticket.product} Platform.
+                                  The following comment is what the ticket is addressing '${ticket.comment}'. Client phone number is ${ticket.phone}. Kindly take a look at it as soon as possible.</p>
                                   <!-- <p>Kindly take a look at it as soon as possible.</p> -->
                                   <p>Best regards.</p>
                                 </td>
